@@ -13,7 +13,7 @@ public class Task2 {
     }
     public static void evenAndOdd (int number) {
         int odd = 0;
-        int even = 0;
+        int even = number==0 ? 1 : 0;
         number = Math.abs(number);
         while (number>0) {
             int rem = number%10;
