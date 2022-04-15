@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Main {
     public static void StringProcessing1(String text) {
         int len = text.length();
@@ -8,9 +10,10 @@ public class Main {
         }
     }
     public static void main(String[] args) {
-        Main.StringProcessing1("kavabanga");
-        Task2.evenAndOdd(43560);
-        System.out.println(Task2.summa(-497527564));
-        System.out.println(Task2.reverseNum(890877420));
+        System.out.println(Arrays.toString(Task3.Array1(10)));
+        System.out.println(Arrays.toString(Task3.Array2(10)));
+        System.out.println(Arrays.toString(Task3.Array3(10)));
+        Task3.Array4(3);
+
     }
 }
