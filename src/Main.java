@@ -10,10 +10,10 @@ public class Main {
         }
     }
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(Task3.Array1(10)));
-        System.out.println(Arrays.toString(Task3.Array2(10)));
-        System.out.println(Arrays.toString(Task3.Array3(10)));
-        Task3.Array4(3);
+        System.out.println(Arrays.toString(Task3.fillZerosAndOnes(10)));
+        System.out.println(Arrays.toString(Task3.fillOdds(10)));
+        System.out.println(Arrays.toString(Task3.fillRandomZerosAndOnes(40)));
+        Task3.fillRandomTwoDimensionalArray(3);
 
     }
 }
