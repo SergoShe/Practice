@@ -6,7 +6,7 @@ import java.util.Random;
 
 public class Main {
 
-    public static void StringProcessing1(String text) {
+    public static void stringProcessing1(String text) {
         int len = text.length();
         if (len > 5) {
             System.out.println(text.substring(0, 3) + text.substring(len - 3));
@@ -15,19 +15,19 @@ public class Main {
         }
     }
 
-    public static void GuessNumber(int n, int k) throws IOException {
+    public static void guessNumber(int n, int k) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         Random random = new Random();
-        int RandNum = random.nextInt(n) + 1;
+        int randNum = random.nextInt(n) + 1;
         int countAttempt = 0;
         boolean isGuessed = false;
         while (countAttempt < k && !isGuessed) {
             System.out.print("Enter number: ");
             int num = Integer.parseInt(reader.readLine());
-            if (RandNum == num) {
+            if (randNum == num) {
                 System.out.println("You guessed!");
                 isGuessed = true;
-            } else if (RandNum > num) {
+            } else if (randNum > num) {
                 System.out.print("More. ");
             } else {
                 System.out.print("Less. ");
@@ -52,7 +52,7 @@ public class Main {
         Task3.fillRandomTwoDimensionalArray(3);
         */
         //task4
-        GuessNumber(10, 3);
+        guessNumber(10, 3);
 
 
     }
