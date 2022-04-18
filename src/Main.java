@@ -18,23 +18,21 @@ public class Main {
     public static void GuessNumber(int n, int k) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         Random random = new Random();
-        int RandNum = random.nextInt(n);
+        int RandNum = random.nextInt(n) + 1;
         int countAttempt = 0;
         boolean isGuessed = false;
-        while (countAttempt < k) {
+        while (countAttempt < k && !isGuessed) {
             System.out.print("Enter number: ");
             int num = Integer.parseInt(reader.readLine());
             if (RandNum == num) {
                 System.out.println("You guessed!");
                 isGuessed = true;
-                break;
             } else if (RandNum > num) {
                 System.out.print("More. ");
-                countAttempt++;
             } else {
                 System.out.print("Less. ");
-                countAttempt++;
             }
+            countAttempt++;
         }
         if (!isGuessed)
             System.out.println("The attempts are over");
@@ -54,7 +52,7 @@ public class Main {
         Task3.fillRandomTwoDimensionalArray(3);
         */
         //task4
-        GuessNumber(10,3);
+        GuessNumber(10, 3);
 
 
     }
