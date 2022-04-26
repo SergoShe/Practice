@@ -38,6 +38,14 @@ public class Main {
             System.out.println("The attempts are over");
     }
 
+    public static void calculateFunction() {
+        System.out.println("\tx\t\t y");
+        for (double x = -5; x <= 5; x += 0.5) {
+            double y = 5 - x*x/2;
+            System.out.println("   "+x+"\t\t"+y);
+        }
+    }
+
     public static void main(String[] args) throws IOException {
         /*//task1
         StringProcessing1("kavabanga");
@@ -50,10 +58,11 @@ public class Main {
         System.out.println(Arrays.toString(Task3.fillOdds(10)) + "\n");
         System.out.println(Arrays.toString(Task3.fillRandomZerosAndOnes(40)) + "\n");
         Task3.fillRandomTwoDimensionalArray(3);
-        */
         //task4
         guessNumber(10, 3);
-
+        */
+        //Task5
+        calculateFunction();
 
     }
 }
