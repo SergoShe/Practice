@@ -41,9 +41,21 @@ public class Main {
     public static void calculateFunction() {
         System.out.println("\tx\t\t y");
         for (double x = -5; x <= 5; x += 0.5) {
-            double y = 5 - x*x/2;
-            System.out.println("   "+x+"\t\t"+y);
+            double y = 5 - x * x / 2;
+            System.out.println("   " + x + "\t\t" + y);
         }
+    }
+
+    public static boolean checkString(String text) {
+        int length = text.length();
+        boolean[] buffer = new boolean[128];
+        for (int i = 0; i < length; i++) {
+            int letter = text.charAt(i);
+            if (buffer[letter])
+                return false;
+            buffer[letter]=true;
+        }
+        return true;
     }
 
     public static void main(String[] args) throws IOException {
@@ -60,9 +72,10 @@ public class Main {
         Task3.fillRandomTwoDimensionalArray(3);
         //task4
         guessNumber(10, 3);
-        */
         //Task5
         calculateFunction();
+        *///Task6
+        System.out.println(checkString("av"));
 
     }
 }
