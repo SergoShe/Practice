@@ -5,7 +5,7 @@ public class Task7 {
     static BufferedReader reader;
     static BufferedWriter writer;
 
-    public static void init(){
+    public static void init() {
 
         try {
             reader = new BufferedReader(new FileReader("input1.txt"));
@@ -15,8 +15,8 @@ public class Task7 {
         }
     }
 
-    public static void close(){
-        try{
+    public static void close() {
+        try {
             reader.close();
             writer.flush();
             writer.close();

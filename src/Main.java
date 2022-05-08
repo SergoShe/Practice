@@ -45,24 +45,6 @@ public class Main {
         }
     }
 
-    public static void workWithFile() {
-        File file = new File("input1.txt");
-        try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
-            try (BufferedWriter writer = new BufferedWriter(new FileWriter("output1.txt"))) {
-                String text;
-                while ((text = reader.readLine()) != null) {
-                    String upperLetter = text.substring(0, 1).toUpperCase();
-                    String toUpperLine = upperLetter + text.substring(1) + "\n";
-                    writer.write(toUpperLine);
-                }
-                reader.close();
-
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
     public static void main(String[] args) throws IOException {
         /*//task1
         StringProcessing1("kavabanga");
