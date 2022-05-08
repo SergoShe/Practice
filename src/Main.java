@@ -46,6 +46,18 @@ public class Main {
         }
     }
 
+    public static boolean checkString(String text) {
+        int length = text.length();
+        boolean[] buffer = new boolean[128];
+        for (int i = 0; i < length; i++) {
+            int letter = text.charAt(i);
+            if (buffer[letter])
+                return false;
+            buffer[letter]=true;
+        }
+        return true;
+    }
+
     public static void main(String[] args) throws IOException {
         /*//task1
         StringProcessing1("kavabanga");
