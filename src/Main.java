@@ -1,7 +1,6 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.util.Arrays;
+import java.util.Locale;
 import java.util.Random;
 
 public class Main {
@@ -41,8 +40,26 @@ public class Main {
     public static void calculateFunction() {
         System.out.println("\tx\t\t y");
         for (double x = -5; x <= 5; x += 0.5) {
-            double y = 5 - x*x/2;
-            System.out.println("   "+x+"\t\t"+y);
+            double y = 5 - x * x / 2;
+            System.out.println("   " + x + "\t\t" + y);
+        }
+    }
+
+    public static void workWithFile() {
+        File file = new File("input1.txt");
+        try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
+            try (BufferedWriter writer = new BufferedWriter(new FileWriter("output1.txt"))) {
+                String text;
+                while ((text = reader.readLine()) != null) {
+                    String upperLetter = text.substring(0, 1).toUpperCase();
+                    String toUpperLine = upperLetter + text.substring(1) + "\n";
+                    writer.write(toUpperLine);
+                }
+                reader.close();
+
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
@@ -60,9 +77,11 @@ public class Main {
         Task3.fillRandomTwoDimensionalArray(3);
         //task4
         guessNumber(10, 3);
-        */
         //Task5
         calculateFunction();
+        */
+        //Task6
+        Task7.workWithFile();
 
     }
 }
