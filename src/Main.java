@@ -41,8 +41,8 @@ public class Main {
     public static void calculateFunction() {
         System.out.println("\tx\t\t y");
         for (double x = -5; x <= 5; x += 0.5) {
-            double y = 5 - x * x / 2;
-            System.out.println("   " + x + "\t\t" + y);
+            double y = 5 - x*x/2;
+            System.out.println("   "+x+"\t\t"+y);
         }
     }
 
@@ -74,8 +74,11 @@ public class Main {
         guessNumber(10, 3);
         //Task5
         calculateFunction();
-        *///Task6
+        //Task6
         System.out.println(checkString("av"));
+        */
+        //Task7
+        Task7.workWithFile();
 
     }
 }
