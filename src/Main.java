@@ -2,6 +2,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.Random;
 
 public class Main {
@@ -41,8 +42,8 @@ public class Main {
     public static void calculateFunction() {
         System.out.println("\tx\t\t y");
         for (double x = -5; x <= 5; x += 0.5) {
-            double y = 5 - x*x/2;
-            System.out.println("   "+x+"\t\t"+y);
+            double y = 5 - x * x / 2;
+            System.out.println("   " + x + "\t\t" + y);
         }
     }
 
@@ -53,9 +54,45 @@ public class Main {
             int letter = text.charAt(i);
             if (buffer[letter])
                 return false;
-            buffer[letter]=true;
+            buffer[letter] = true;
         }
         return true;
+    }
+
+    public static void salaryAnalysis() {
+        String[] names = {"Cornelia Jakobs", "Sam Ryder", "Amanda Tenfjord", "Sheldon Riley", "Rosa Linn",
+                "Malik Harris", "Emma Muscat", "Marius Bear", "Monika Liu", "Nadir Rustamli"};
+        Random rand = new Random();
+        HashMap<String, Integer> nameToSalary = new HashMap<>();
+        int summa = 0;
+        for (String name : names) {
+            int salary = (rand.nextInt(76) + 25) * 1000;
+            summa += salary;
+            nameToSalary.put(name, salary);
+        }
+        int average = summa / nameToSalary.size();
+
+        String highest = names[0], lowest = names[0];
+        for (String name : names) {
+            if (nameToSalary.get(name) > nameToSalary.get(highest))
+                highest = name;
+            if (nameToSalary.get(name) < nameToSalary.get(lowest))
+                lowest = name;
+        }
+        System.out.println("The Highest: " + highest);
+        System.out.println("The Lowest: " + lowest);
+        System.out.print("\nAbove average: ");
+
+        for (String name : names) {
+            if (nameToSalary.get(name) > average)
+                System.out.print(name + "; ");
+        }
+        System.out.println("\n");
+        for (String name : names) {
+            int salary = nameToSalary.get(name);
+            double tax = salary*0.13;
+            System.out.println(name + " - " + (salary - tax) + " - " + tax);
+        }
     }
 
     public static void main(String[] args) throws IOException {
@@ -76,9 +113,10 @@ public class Main {
         calculateFunction();
         //Task6
         System.out.println(checkString("av"));
-        */
         //Task7
         Task7.workWithFile();
-
+        */
+        //Task8
+        salaryAnalysis();
     }
 }
