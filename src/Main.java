@@ -115,8 +115,11 @@ public class Main {
         System.out.println(checkString("av"));
         //Task7
         Task7.workWithFile();
-        */
         //Task8
         salaryAnalysis();
+        */
+        //Task9
+        String password = Task9.generatePassword(8,true,true,true);
+        System.out.println(password);
     }
 }
