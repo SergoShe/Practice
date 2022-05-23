@@ -28,7 +28,6 @@ public class Task9 {
             options.add(numbers);
         if (needSymbol)
             options.add(symblos);
-        options.trimToSize();
         return options;
     }
 }
