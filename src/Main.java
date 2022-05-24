@@ -95,7 +95,7 @@ public class Main {
         }
     }
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws Exception {
         /*//task1
         StringProcessing1("kavabanga");
         //task2
@@ -119,7 +119,7 @@ public class Main {
         salaryAnalysis();
         */
         //Task9
-        String password = Task9.generatePassword(8,true,true,true);
+        String password = Task9.generatePassword(10,true,true,true, true);
         System.out.println(password);
     }
 }
