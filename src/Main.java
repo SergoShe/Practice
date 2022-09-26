@@ -1,9 +1,7 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Random;
+import java.util.*;
 
 public class Main {
 
@@ -127,17 +125,17 @@ public class Main {
 
         //MyQueue
         MyQueue queue = new MyQueue("Brat");
-        queue.push("Hello");
-        queue.push("Sergo");
-        queue.push("Fedos");
+        System.out.println(queue.add("Hello"));
+        queue.add(null);
+        System.out.println(queue.offer("Fedos"));
         System.out.println(queue.peek());
         System.out.println(queue.poll());
         System.out.println(queue.peek());
-        queue.push("Steven");
-        queue.push("Egor");
+        queue.add("Steven");
+        queue.add("Egor");
         System.out.println(queue.poll());
         queue.poll();
-        System.out.println(queue.poll());
-        System.out.println(queue.peek());
+        System.out.println(queue.remove());
+        System.out.println(queue.element());
     }
 }
