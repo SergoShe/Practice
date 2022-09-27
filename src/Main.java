@@ -1,9 +1,7 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Random;
+import java.util.*;
 
 public class Main {
 
@@ -96,8 +94,10 @@ public class Main {
     }
 
     public static void main(String[] args) throws Exception {
-        /*//task1
-        StringProcessing1("kavabanga");
+        /*
+        // ** PART 1 **
+        //task1
+        stringProcessing1("kavabanga");
         //task2
         System.out.println("\n" + Task2.summa(7634574) + "\n");
         Task2.evenAndOdd(7654374);
@@ -117,9 +117,25 @@ public class Main {
         Task7.workWithFile();
         //Task8
         salaryAnalysis();
-        */
         //Task9
         String password = Task9.generatePassword(10,true,true,true, true);
         System.out.println(password);
+        */
+        // ** PART 2 **
+
+        //MyQueue
+        MyQueue queue = new MyQueue("Brat");
+        System.out.println(queue.add("Hello"));
+        queue.add(null);
+        System.out.println(queue.offer("Fedos"));
+        System.out.println(queue.peek());
+        System.out.println(queue.poll());
+        System.out.println(queue.peek());
+        queue.add("Steven");
+        queue.add("Egor");
+        System.out.println(queue.poll());
+        queue.poll();
+        System.out.println(queue.remove());
+        System.out.println(queue.element());
     }
 }
